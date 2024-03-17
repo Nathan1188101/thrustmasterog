@@ -7,3 +7,5 @@ const contentController = require('../Controllers/content')
 router.get('/', (req, res, next) => {
     contentController.index(req, res, next)
 })
+
+module.exports = router 
