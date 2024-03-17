@@ -1,0 +1,10 @@
+{{!-- all content here --}}
+<h1>Content Library</h1>
+<ul class="row">
+    {{#each content}}
+        <li class="card mb-4 text-center">
+            <h5>{{this.title}}</h5>
+            <p>{{this.link}}</p>
+        </li>
+    {{/each}}
+</ul>
