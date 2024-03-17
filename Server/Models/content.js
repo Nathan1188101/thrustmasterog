@@ -9,9 +9,9 @@ let contentSchema = new mongoose.Schema({
     link:{
         type: String,
         required: true 
-    }
+    },
 
 })
-
-let Content = mongoose.model('Content', contentSchema)
+                                                        //specifying collection on end here
+let Content = mongoose.model('Content', contentSchema, 'content')
 module.exports = Content
