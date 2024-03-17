@@ -8,7 +8,8 @@ let index = async (req, res, next) => {
     console.log(content)
     res.render('content/index', {
         title: 'Content Library',
-        content: content 
+        content: content,
+        user: req.user
     })
 
 }

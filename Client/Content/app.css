@@ -18,6 +18,16 @@
     border-radius: 100px;
 }
 
+.btn{
+  margin-bottom: 10px;
+}
+
+.navbar-icon{
+  width: 50px;
+  height: auto;
+  border-radius: 50px;
+}
+
 .card{
     border: 2px solid #ccc; 
     border-radius: 8px; 

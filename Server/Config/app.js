@@ -17,6 +17,12 @@ const contentRouter = require('../Routes/content')
 
 const app = express();
 
+//link to .env file if not in production mode
+if(process.env.NODE_ENV !== 'production')
+{
+  require('dotenv').config()
+}
+
 //db set up and connection
 mongoose.connect(process.env.DB_CONNECTION)
 .then((res) => {console.log('Connected to MongoDB')})

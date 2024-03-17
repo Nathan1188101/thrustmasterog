@@ -24,4 +24,13 @@ router.post('/login', (req, res, next) => {
     authController.submitLogin(req, res, next) 
 })
 
+router.get('/login/:invalid', (req, res, next) => {
+    authController.submitLogin(req, res, next) 
+})
+
+/* GET: /auth/login => logout */
+router.get('/logout', (req, res, next) => {
+    authController.logout(req, res, next)
+})
+
 module.exports = router

@@ -5,6 +5,12 @@
     <li class="card mb-4 text-center">
         <h5>{{this.title}}</h5>
         <p><iframe width="560" height="315" src="{{this.link}}" frameborder="0" allowfullscreen></iframe></p>
+        {{#if ../user}}
+            <a href="/content/delete/{{this._id}}" class="btn btn-primary"
+                onClick="return confirm('fr??')">
+                Delete
+            </a>
+            {{/if}}
     </li>
     {{/each}}
 </ul>

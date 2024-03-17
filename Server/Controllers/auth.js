@@ -17,7 +17,14 @@ let displayRegisterForm = (req, res, next) => {
 
 //display login form function
 let displayLoginForm = (req, res, next) => {
-    res.render('auth/login', { title: 'Login' });
+
+    let messages = ''
+
+    if(req.params.invalid){
+        messages = 'Invalid Login'
+    }
+
+    res.render('auth/login', { title: 'Login', messages: messages })
 }
 
 //submit register function 
@@ -29,7 +36,7 @@ let submitRegister = (req, res, next) => {
         }
         else{
             req.login(newUser, (err) => {
-                res.redirect('/media')
+                res.redirect('/content')
             })
         }
     })
@@ -41,18 +48,24 @@ let submitLogin = (req, res , next) => {
     //basically handing it over to passport here to deal with these parts 
     passport.authenticate('local', (err, user) => {
         if(err){
-            return res.redirect('/auth/login?invalid=true')
+            return res.redirect('/auth/login/invalid')
         }
         else{
             req.login(user, (err) => {
                 if(user){
-                    return res.redirect('/media')
+                    return res.redirect('/content')
                 }
-                return res.redirect('/auth/login?invalid=true')
+                return res.redirect('/auth/login/invalid')
             })
             
         }
     })(req, res, next) 
+}
+
+let logout = (req, res, next) => {
+    req.logout((err) => {
+        return res.redirect('/')
+    })
 }
 
 // make public
@@ -60,7 +73,8 @@ module.exports = {
     displayRegisterForm,
     displayLoginForm,
     submitRegister,
-    submitLogin
+    submitLogin,
+    logout
 }
 
 

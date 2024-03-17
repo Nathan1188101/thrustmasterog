@@ -11,12 +11,12 @@ const User = require('../Models/user');
 function DisplayHome(req, res, next)
 {
   /* Now Render the ejs page */
-  res.render('index', {title: 'Home', page: 'home'});
+  res.render('index', {title: 'Home', page: 'home', user: req.user});
 }
 
 function DisplayAbout(req, res, next){
   console.log("DisplayAbout function called")
-  res.render('about', {title: "About", page: 'about'})
+  res.render('about', {title: "About", page: 'about', user: req.user})
 }
 
 module.exports = {
