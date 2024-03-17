@@ -5,15 +5,21 @@ const router = express.Router();
 const IndexController = require('../Controllers/index');
 
 /* GET Default Route */
-router.get('/', (req, res, next)=>
+router.get('/', (req, res, next) =>
 {
-    IndexController.DisplayHome(req, res, next);
-});
+    IndexController.DisplayHome(req, res, next)
+})
 
 /* GET Home Page */
-router.get('/home', (req, res, next)=>
+router.get('/home', (req, res, next) =>
 {
-    IndexController.DisplayHome(req, res, next);
-});
+    IndexController.DisplayHome(req, res, next)
+})
+
+/* GET About Page */
+router.get('/about', (req, res, next) =>
+{
+    IndexController.DisplayAbout(req, res, next)
+})
 
 module.exports = router;

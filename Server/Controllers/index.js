@@ -10,17 +10,20 @@ const User = require('../Models/user');
  */
 function DisplayHome(req, res, next)
 {
-  /* No need to create a User, but demonstrating how to use the Model */
-  let user = new User();
-  user.username = 'admin';
-  console.log(`username: ${user.username}`);
-
   /* Now Render the ejs page */
   res.render('index', {title: 'Home', page: 'home'});
 }
 
+function DisplayAbout(req, res, next){
+  res.render('about',{
+    title: "About",
+    page: 'about'
+  })
+}
+
 module.exports = {
- DisplayHome: DisplayHome 
+ DisplayHome: DisplayHome,
+ DisplayAbout: DisplayAbout,  
 }
 
   

@@ -1,10 +1,10 @@
-{{!-- all content here --}} 
+{{!-- all content here --}}
 <h1>Content Library</h1>
 <ul class="row">
     {{#each content}}
-        <li class="card mb-4 text-center">
-            <h5>{{this.title}}</h5>
-            <p><iframe width="560" height="315" src="{{this.link}}" frameborder="0" allowfullscreen></iframe></p>
-        </li>
+    <li class="card mb-4 text-center">
+        <h5>{{this.title}}</h5>
+        <p><iframe width="560" height="315" src="{{this.link}}" frameborder="0" allowfullscreen></iframe></p>
+    </li>
     {{/each}}
 </ul>
