@@ -15,10 +15,8 @@ function DisplayHome(req, res, next)
 }
 
 function DisplayAbout(req, res, next){
-  res.render('about',{
-    title: "About",
-    page: 'about'
-  })
+  console.log("DisplayAbout function called")
+  res.render('about', {title: "About", page: 'about'})
 }
 
 module.exports = {

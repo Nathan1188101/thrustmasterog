@@ -1,5 +1,9 @@
 /* Custom CSS Goes Here */
 
+.blue-body{
+    background-color: #3a63e3;
+}
+
 .navbar-dark {
     background-color: #000000;
 }
@@ -25,3 +29,121 @@
         align-items: center;
     }
 }
+
+/**********************************/
+/**      About page        ********/
+/**********************************/
+
+.pfp-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+
+  } 
+  
+  .about-image img{
+    width: auto;
+    height: 500px; 
+  }
+  
+  .images-about{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-gap: 100px;
+  }
+  
+  .images-about div img{
+    height: 170px; 
+    width: auto;
+    border-radius: 70px;
+  }
+  
+  .aboutus {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    z-index: -1;
+    line-height: 1.7;
+    letter-spacing: 2px;
+  }
+  
+  .images-about div p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .about-us{
+    margin-bottom: 50px;
+    margin-top: 90px;
+  }
+  
+  .about-us-description{
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  
+  .happen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .team-container{
+    background-color: #3a63e3;
+  }
+  
+  .aboutus-footer{
+    background-color: #001220;
+  }
+
+  .game-img{
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .game-img:hover{
+    transform: scale(1.1);
+  }
+  
+  @media(max-width: 1500px){
+  
+    .top-container{
+      grid-template-columns: 1fr;
+    }
+  
+    .aboutus{
+      height: 500px;
+    }
+  
+    .about-us-description{
+      padding-left: 50px;
+      padding-right: 50px; 
+    }
+  
+  }
+  
+  @media(max-width: 800px){
+  
+    .images-about{
+    
+      grid-template-columns: 1fr;
+  
+    }
+  
+  }
