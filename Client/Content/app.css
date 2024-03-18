@@ -318,3 +318,70 @@ main{
   background-position: center;
   background-size: cover; 
 } */
+
+/**********************************************************/
+/**************** login page styling **********************/
+/**********************************************************/
+
+.login-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.big-image{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  height: 600px;
+}
+
+.big-image img{
+  max-width: 100%;
+  height: auto; 
+}
+
+.login {
+  background-color: #fff;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 150px;
+}
+
+.form-group{
+  padding: 10px;
+}
+
+.form-group:nth-child(2) input{
+  margin-left: 5px;
+}
+
+.loginbtn{
+  background-color:#1ec463;
+}
+
+.loginbtn:hover{
+  background-color:#19a152;
+}
+
+.third{
+  margin-left: 15px;
+}
+
+/* For responsiveness */
+
+@media (max-width: 1200px) {
+
+  .login-container {
+    grid-template-columns: 1fr; /* Stack the children vertically */
+  }
+    .login {
+      padding-left: 30%; /* Adjust padding for smaller screens */
+      padding-right: 30%;
+      padding-top: 10%;
+      height: 600px;
+    }
+
+
+ 
+}

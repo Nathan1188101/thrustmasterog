@@ -1,25 +1,35 @@
 {{!-- Come back and modify these later (I think I want this to look like the NCAA page for register) --}}
-
-<h1>Register</h1>
-{{#if messages}}
-    <h3 class="alert alert-danger">{{messages}}</h3>
-{{/if}}
-<form method="post">
-    <fieldset class="form-group">
-        <label for="username" class="col-2 control-label">Username: *</label>
-        <input name="username" id="username" required type="email" placeholder="email@email.com" />
-    </fieldset>
-    <fieldset class="form-group">
-        <label for="password" class="col-2 control-label">Password: *</label>
-        <input name="password" id="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
-    </fieldset>
-    <fieldset class="form-group">
-        <label for="confirm" class="col-2 control-label">Confirm: *</label>
-        <input name="confirm" id="confirm" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
-    </fieldset>
-    <fieldset class="form-group">
-        <button class="btn btn-secondary offset-2">Register</button>
-        <hr />
-        Already have an account? <a href="/auth/login" title="Login">Login</a>
-    </fieldset>
-</form>
+<section class="login-container">
+        <section class="big-image">
+        <div>
+            <img src="../Content/rollingPug.gif">
+        </div>
+    </section>
+    <section class="login">
+        {{#if messages}}
+        <h3 class="alert alert-danger">{{messages}}</h3>
+        {{/if}}
+        <h1>Register</h1>
+        <form method="post">
+            <fieldset class="form-group">
+                <label class="input-label" for="username" class="col-2 control-label">Username: *</label>
+                <input name="username" id="username" required type="email" placeholder="email@email.com" />
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="input-label" for="password" class="col-2 control-label">Password: *</label>
+                <input name="password" id="password" type="password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+            </fieldset>
+            <fieldset class="third form-group">
+                <label class="input-label" for="confirm" class="col-2 control-label">Confirm: *</label>
+                <input name="confirm" id="confirm" type="password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+            </fieldset>
+            <fieldset class="form-group">
+                <button class="loginbtn btn btn-secondary offset-2">Register</button>
+                <hr />
+                Already have an account? <a href="/auth/login" title="Login">Login</a>
+            </fieldset>
+        </form>
+    </section>
+</section>

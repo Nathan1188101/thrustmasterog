@@ -1,5 +1,8 @@
 {{!-- all content here --}}
 <h1>Content Library</h1>
+{{#if user}}
+    <a href="/content/create" style="text-decoration: none;">Add Content</a>
+{{/if}}
 <ul class="row">
     {{#each content}}
     <li class="card mb-4 text-center">
@@ -9,6 +12,9 @@
             <a href="/content/delete/{{this._id}}" class="btn btn-primary"
                 onClick="return confirm('fr??')">
                 Delete
+            </a>
+            <a href="/content/edit/{{this._id}}" class="btn btn-primary">
+                Edit
             </a>
             {{/if}}
     </li>

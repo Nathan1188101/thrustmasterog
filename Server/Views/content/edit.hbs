@@ -1,0 +1,13 @@
+<h1>Edit Content</h1>
+<form method="post">
+    <fieldset>
+        <label for="title">Title: *</label>
+        <input name="title" id="title" required value="{{content.title}}" />
+    </fieldset>
+        <fieldset>
+        <label for="link">Link: *</label>
+        <input name="link" id="link" required value="{{content.link}}"/>
+        <p>MUST BE EMBEDDED LINK</p>
+    </fieldset>
+    <button class="btn btn-primary offset-2">Save</button>
+</form>
