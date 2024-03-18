@@ -271,4 +271,18 @@ main{
   }
 }
 
+/****************************************************/
+/*** home page styling ******************************/
+/****************************************************/
 
+.skill{
+  background-color:#1ec463; 
+}
+
+.entertainment{
+  background-color: #cc3333;
+}
+
+.join{
+  background-color: #3a63e3;
+}
