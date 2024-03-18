@@ -84,6 +84,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0,1fr));
     grid-gap: 100px;
+    margin-bottom: 100px;
   }
   
   .images-about div img{
@@ -125,7 +126,11 @@
     padding-bottom: 50px;
   }
   
-  .team-container{
+  .socials-container{
+    background-color: #3a63e3;
+  }
+
+  .games-container{
     background-color: #3a63e3;
   }
   
@@ -285,4 +290,26 @@ main{
 
 .join{
   background-color: #3a63e3;
+}
+
+/****************************************************/
+/*** footer styling ******************************/
+/****************************************************/
+
+.footer{
+  background-color: black;
+  height: 70px;
+}
+/* 
+.footer-svg{
+  background-image: url('../Content/footer.svg'); 
+  /* height: 1000px; */
+} */
+
+.spacer{
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
 }
