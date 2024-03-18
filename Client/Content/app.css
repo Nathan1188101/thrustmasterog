@@ -299,17 +299,22 @@ main{
 .footer{
   background-color: black;
   height: 70px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
+
+
+
 /* 
 .footer-svg{
   background-image: url('../Content/footer.svg'); 
-  /* height: 1000px; */
+  height: 1000px; 
 } */
 
-.spacer{
+/* .spacer{
   aspect-ratio: 960/300;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
-}
+} */
