@@ -22,6 +22,10 @@
   margin-bottom: 10px;
 }
 
+.video{
+  border-radius: 20px;
+}
+
 .navbar-icon{
   width: 50px;
   height: auto;
@@ -164,4 +168,107 @@
     }
   
   }
+
+/****************************************************/
+/*** masthead styling *******************************/
+/****************************************************/
+
+/*
+.masthead{
+  grid-area: hero;
+  width: 100%; 
+  height: 70vh;
+  background-image: url(../img/primusTech.png);
+  background-attachment: fixed;
+  background-size: 50% auto; 
+  background-position: center; 
+}
+
+.masthead > div{
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  height: 100%;
+  width: 100%; 
+  background-color: rgba(0,0,0,.7);
+}
+
+@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
+}
+
+.masthead > div > figure > h1{
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  animation: up-down 2.6s infinite ease-in-out alternate;
+  font-family: 'Space Mono', monospace;
+}
+
+main{
+  grid-area: main; 
+}
+*/
+
+.masthead-link{
+  text-decoration: none;
+}
+
+
+.masthead{
+  position: relative;
+  overflow: hidden;
+  grid-area: hero;
+  width: 100%; 
+  height: 70vh;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center; 
+}
+
+.masthead-video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.masthead > div{
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  height: 100%;
+  width: 100%; 
+  background-color: rgba(0,0,0,.7); /* Optional: for darker overlay */
+}
+
+.masthead > div > figure > h1{
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  animation: up-down 2.6s infinite ease-in-out alternate;
+  font-family: 'Space Mono', monospace;
+}
+
+@keyframes up-down{
+  from{
+    transform: translatey(0px);
+  }
+  to{
+    transform: translatey(-20px);
+  }
+}
+
 

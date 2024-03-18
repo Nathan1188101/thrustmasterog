@@ -14,6 +14,15 @@ let index = async (req, res, next) => {
 
 }
 
+let deleteContent = async (req, res, next) => {
+
+    await Content.findByIdAndDelete(req.params._id)
+
+    res.redirect('/content')
+
+}
+
 module.exports = {
-    index
+    index,
+    deleteContent
 }
