@@ -377,7 +377,7 @@ input[type="email"] {
 
 .card{
   border: 2px solid #181818; 
-  border-radius: 8px; 
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   max-width: 600px;
   min-width: 600px;
@@ -385,10 +385,19 @@ input[type="email"] {
   color: rgb(226, 223, 223); 
 }
 
+
 .video{
   border-radius: 20px;
 }
 
+.title{
+  margin-top: 5px;
+}
+
+.add{
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
 @media(max-width: 768px){
 
@@ -423,9 +432,7 @@ input[type="email"] {
   }
 }
 
-/**********************************************************/
-/**************** content page styling ********************/
-/**********************************************************/
+/* Background from: https://www.gradientmagic.com/ */
 
 .background1{
   background-image: linear-gradient(135deg, rgba(107, 107, 107,0.06) 0%, rgba(107, 107, 107,0.06) 50%,rgba(202, 202, 202,0.06) 50%, rgba(202, 202, 202,0.06) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 30px 30px;
@@ -435,3 +442,6 @@ input[type="email"] {
   background-image: linear-gradient(45deg, rgba(187, 187, 187,0.04) 0%, rgba(187, 187, 187,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 142px 142px;
 }
 
+/**********************************************************/
+/**************** content page styling ********************/
+/**********************************************************/

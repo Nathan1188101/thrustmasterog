@@ -1,13 +1,22 @@
+{{!-- had to link style sheets here, they weren't loading for some reason --}}
+<link rel="stylesheet" href="/Content/app.css">
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
+
 <h1>Edit Content</h1>
 <form method="post">
     <fieldset>
         <label for="title">Title: *</label>
-        <input name="title" id="title" required value="{{content.title}}" />
+        <input name="title" id="title" type="text" required value="{{content.title}}" />
     </fieldset>
         <fieldset>
         <label for="link">Link: *</label>
-        <input name="link" id="link" required value="{{content.link}}"/>
+        <input name="link" id="link" type="text" required value="{{content.link}}"/>
         <p>MUST BE EMBEDDED LINK</p>
     </fieldset>
-    <button class="btn btn-primary offset-2">Save</button>
+    <button class="btn btn-primary">Save</button>
 </form>
+
+<script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/app.js"></script>

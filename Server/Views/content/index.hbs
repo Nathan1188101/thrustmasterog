@@ -1,7 +1,7 @@
 {{!-- all content here --}}
 <body class="background2 content-body">
 {{#if user}}
-    <h1><a href="/content/create" style="text-decoration: none;">Add Content</a> </h1>
+    <h1 class="add"><a href="/content/create" style="text-decoration: none;"><i class="fa-solid fa-video"></i> Add Content</a> </h1>
 {{/if}}
 <div class="searchBar-container">
     <input class="searchBar" type="text" id="search" placeholder="Search">
@@ -9,12 +9,12 @@
 <ul class="row" id="content">
     {{#each content}}
     <li class="card mb-4 text-center">
-        <h5 id="title">{{this.title}}</h5>
+        <h5 class="title" id="title">{{this.title}}</h5>
         <p><iframe class="video" width="560" height="315" src="{{this.link}}" frameborder="0" allowfullscreen></iframe></p>
         {{#if ../user}}
             <a href="/content/delete/{{this._id}}" class="btn btn-primary"
                 onClick="return confirm('fr??')">
-                Delete
+                Delete 
             </a>
             <a href="/content/edit/{{this._id}}" class="btn btn-primary">
                 Edit
