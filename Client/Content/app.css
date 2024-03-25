@@ -443,5 +443,17 @@ input[type="email"] {
 }
 
 /**********************************************************/
-/**************** content page styling ********************/
+/**************** edit page styling ***********************/
 /**********************************************************/
+
+.edit-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.edit-h1{
+  margin-left: 10px;
+  margin-top: 10px;
+}
