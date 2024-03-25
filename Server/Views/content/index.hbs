@@ -1,12 +1,11 @@
 {{!-- all content here --}}
 <body class="content-body">
-<h1>Content Library</h1>
+{{#if user}}
+    <h1><a href="/content/create" style="text-decoration: none;">Add Content</a> </h1>
+{{/if}}
 <div class="searchBar-container">
     <input class="searchBar" type="text" id="search" placeholder="Search">
 </div>
-{{#if user}}
-    <a href="/content/create" style="text-decoration: none;">Add Content</a>
-{{/if}}
 <ul class="row" id="content">
     {{#each content}}
     <li class="card mb-4 text-center">
