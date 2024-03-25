@@ -24,6 +24,7 @@ router.post('/login', (req, res, next) => {
     authController.submitLogin(req, res, next) 
 })
 
+/* GET: /auth/login/:invalid => invalid login */
 router.get('/login/:invalid', (req, res, next) => {
     authController.submitLogin(req, res, next) 
 })
