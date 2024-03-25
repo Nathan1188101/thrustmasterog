@@ -7,6 +7,9 @@
         </div>
     </section>
     <section class="login">
+        {{#if messages}}
+        <h3 class="alert alert-danger">{{messages}}</h3>
+        {{/if}}
         <h1>Login</h1>
         <form method="post" action="/auth/login">
             <fieldset class="form-group">

@@ -48,14 +48,15 @@ let submitLogin = (req, res , next) => {
     //basically handing it over to passport here to deal with these parts 
     passport.authenticate('local', (err, user) => {
         if(err){
-            return res.redirect('/auth/login/invalid')
+            return res.render('auth/login', {messages: err})
         }
         else{
             req.login(user, (err) => {
                 if(user){
                     return res.redirect('/content')
                 }
-                return res.redirect('/auth/login/invalid')
+                
+                return res.render('auth/login', {messages: "Invalid Login"})
             })
             
         }

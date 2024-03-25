@@ -3,28 +3,28 @@
 <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css">
 
+<body class="background2 content-body">
 <h1 class="edit-h1">Edit Content</h1>
 <section class="edit-container">
     <section class="edit-form">
         <form method="post">
             <fieldset>
-                <label for="title">Title: *</label>
-                <input name="title" id="title" type="text" required value="{{content.title}}" />
+                <label class="title-label" for="title">Title: <i class="fa-solid fa-pen-nib"></i></label>
+                <input class="title-input" name="title" id="title" type="text" required value="{{content.title}}" />
             </fieldset>
             <fieldset>
-                <label for="link">Link: *</label>
-                <input name="link" id="link" type="text" required value="{{content.link}}" />
-                <p>MUST BE EMBEDDED LINK</p>
+                <label class="link-label" for="link">Link: <i class="fa-solid fa-link"></i></label>
+                <input class="link-input" name="link" id="link" type="text" required value="{{content.link}}" />
+                <p class="message">MUST BE EMBEDDED LINK</p>
             </fieldset>
-            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary offset">Save</button>
         </form>
     </section>
     <section class="edit-video">
-        <p><iframe class="video" width="560" height="315" src="{{content.link}}" frameborder="0" allowfullscreen></iframe></p>
+        <div><iframe class="edit-video" width="560" height="315" src="{{content.link}}" frameborder="0" allowfullscreen></iframe></div>
     </section>
-
 </section>
-
+</body>
 
 <script src="/jquery/dist/jquery.min.js"></script>
 <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

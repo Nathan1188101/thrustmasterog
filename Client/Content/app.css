@@ -26,6 +26,10 @@
 /**      About page        ********/
 /**********************************/
 
+.about-section{
+  /* height: 100vh; */
+}
+
 .pfp-container{
     display: flex;
     justify-content: center;
@@ -106,7 +110,28 @@
 
   .games-container{
     background-color: #3a63e3;
+    
   }
+
+  @media(max-width: 768px){
+
+    .about-image{
+      width: 70vw;
+      height: auto;
+      margin-left: 55px;
+    
+    }
+    
+    .body{
+      overflow-x: hidden;
+    }
+    
+    .thrust{
+     transform: scale(.5);
+    }
+    
+    
+    }
   
   .aboutus-footer{
     background-color: #001220;
@@ -222,6 +247,30 @@
 
 .join{
   background-color: #3a63e3;
+}
+
+.home-body{
+  background-color: #202020;
+}
+
+@media(max-width: 768px){
+
+.about-image{
+  width: 70vw;
+  height: auto;
+  margin-left: 55px;
+
+}
+
+.body{
+  overflow-x: hidden;
+}
+
+.thrust{
+ transform: scale(.5);
+}
+
+
 }
 
 /****************************************************/
@@ -447,13 +496,60 @@ input[type="email"] {
 /**********************************************************/
 
 .edit-container{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
   justify-content: center;
   align-items: center;
   padding: 5%;
+  height: 90vh;
 }
 
 .edit-h1{
   margin-left: 10px;
   margin-top: 10px;
+  color: rgb(226, 223, 223);
 }
+
+.edit-form{
+  justify-content: center;
+}
+
+.edit-video{
+  justify-content: center;
+}
+
+.title-input, .link-input{
+  max-width: 400px;
+  background-color: rgb(226, 223, 223);
+}
+
+.link-label, .title-label{
+  color: rgb(226, 223, 223);
+}
+
+.message{
+  color: #cc3333;
+}
+
+@media(max-width: 768px){
+
+  .edit-container{
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .edit-form{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .edit-video{
+    height: 300px;
+    width: 400px;
+  }
+
+
+}
+
+
