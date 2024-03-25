@@ -58,8 +58,9 @@ passport.use(new GoogleStrategy({
   callbackURL: process.env.GOOGLE_CALLBACK
 },function(accessToken, refreshToken, profile, done){
 
-User.findOrCreate({googleId: profile.id}, {
+User.findOrCreate({'google.id': profile.id}, {
       username: profile.emails[0].value, // because more than one email can be associated with a google acount, it's contained in an array and we are taking the first email in that array at index 0
+      'google.id': profile.id, 
       'google.token': accessToken,
       'google.email': profile.emails[0].value, //same here as mentioned above
       'google.name': profile.displayName

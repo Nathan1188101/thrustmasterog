@@ -1,4 +1,5 @@
 {{!-- Come back and modify these later (I think I want this to look like the NCAA page for register) --}}
+<body class="login-body">
 <section class="login-container">
         <section class="big-image">
         <div>
@@ -12,26 +13,26 @@
         <h1>Register</h1>
         <form method="post">
             <fieldset class="form-group">
-                <label class="input-label" for="username" class="col-2 control-label">Username: *</label>
+                {{!-- <label class="input-label" for="username" class="col-2 control-label">Username: *</label> --}}
                 <input name="username" id="username" required type="email" placeholder="email@email.com" />
             </fieldset>
             <fieldset class="form-group">
-                <label class="input-label" for="password" class="col-2 control-label">Password: *</label>
+                {{!-- <label class="input-label" for="password" class="col-2 control-label">Password: *</label> --}}
                 <input name="password" id="password" type="password" required
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
-            </fieldset>
-            <fieldset class="third form-group">
-                <label class="input-label" for="confirm" class="col-2 control-label">Confirm: *</label>
-                <input name="confirm" id="confirm" type="password" required
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password *"/>
             </fieldset>
             <fieldset class="form-group">
-                <button class="loginbtn btn btn-secondary offset-2">Register</button>
+                {{!-- <label class="input-label" for="confirm" class="col-2 control-label">Confirm: *</label> --}}
+                <input name="confirm" id="confirm" type="password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Confirm Password *"/>
+            </fieldset>
+            <fieldset class="form-group">
+                <button class="loginbtn btn btn-secondary">Register</button>
                 <hr />
-                Already have an account? <a href="/auth/login" title="Login">Login</a>
-                <p>or</p>
-                <a href="/auth/google">Sign in with google</a>
+                <p>Already have an account? <a href="/auth/login" title="Login">Login</a></p>
+                <a href="/auth/google"><i class="fa-brands fa-google"></i></a>
             </fieldset>
         </form>
     </section>
 </section>
+</body>

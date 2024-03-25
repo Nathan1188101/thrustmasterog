@@ -33,10 +33,10 @@
                 <ul class="navbar-nav ms-auto">
                     {{#if user}}
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/logout"><i class="fa-regular fa-id-badge"></i> Logout</a>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> {{user.username}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-regular fa-id-badge"></i> {{user.username}}</a>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/auth/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                     {{else}}
                     <li class="nav-item">

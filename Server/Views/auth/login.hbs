@@ -1,4 +1,5 @@
 {{!-- Come back and modify these later (I think I want this to look like the NCAA page for login) --}}
+<body class="login-body">
 <section class="login-container">
     <section class="big-image">
         <div>
@@ -9,20 +10,20 @@
         <h1>Login</h1>
         <form method="post" action="/auth/login">
             <fieldset class="form-group">
-                <label class="input-label" for="username" class="col-2 control-label">Username: *</label>
-                <input name="username" id="username" required />
+                {{!-- <label class="input-label" for="username" class="col-2 control-label">Username: *</label> --}}
+                <input name="username" id="username" type="email" required placeholder="email@email.com "/>
             </fieldset>
             <fieldset class="form-group">
-                <label class="input-label" for="password" class="col-2 control-label">Password: *</label>
-                <input name="password" id="password" type="password" required />
+                {{!-- <label class="input-label" for="password" class="col-2 control-label">Password: *</label> --}}
+                <input name="password" id="password" type="password" required placeholder="Password *"/>
             </fieldset>
             <fieldset class="form-group">
-                <button class="loginbtn btn btn-secondary offset-2">Login</button>
+                <button class="loginbtn btn btn-secondary">Login</button>
                 <hr />
-                Need an account? <a href="/auth/register" title="Register">Register</a>
-                <p>or</p>
-                <a href="/auth/google">Sign in with google</a>
+                <p>Need an account? <a href="/auth/register" title="Register">Register</a> </p>
+                <a href="/auth/google"><i class="fa-brands fa-google"></i></a>
             </fieldset>
         </form>
     </section>
 </section>
+</body>
