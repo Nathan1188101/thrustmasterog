@@ -1,12 +1,13 @@
 // required node modules
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const createError = require('http-errors')
+const express = require('express')
+const path = require('path')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
 const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
+const GoogleStrategy = require('passport-google-oauth20').Strategy
 
 let dotenv = require('dotenv').config()
 
@@ -50,9 +51,36 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session()) 
 
+//adding GoogleOAuth setup after initilize and before the routes
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: process.env.GOOGLE_CALLBACK
+},function(accessToken, refreshToken, profile, done){
+
+User.findOrCreate({googleId: profile.id}, {
+      username: profile.emails[0].value, // because more than one email can be associated with a google acount, it's contained in an array and we are taking the first email in that array at index 0
+      'google.token': accessToken,
+      'google.email': profile.emails[0].value, //same here as mentioned above
+      'google.name': profile.displayName
+    },function(err, user){
+      return done(err, user)
+    })
+  }
+))
+
 //link passport to User
 const User = require('../Models/user')
 passport.use(User.createStrategy())
+
+//have to handle user session with google credentials 
+passport.serializeUser((user, done) => { //saving the user's id in the session
+  done(null, user)
+})
+
+passport.deserializeUser((user, done) => {
+  done(null, user) //deserialize is fethcing the user from the db for each request using the id in the session 
+})
 
 //link User model w/passport session mgmt
 passport.serializeUser(User.serializeUser())

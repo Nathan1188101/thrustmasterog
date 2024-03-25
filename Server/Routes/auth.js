@@ -1,4 +1,5 @@
 const express = require('express')
+const passport = require('passport')
 const router = express.Router() 
 
 //auth controller
@@ -33,5 +34,19 @@ router.get('/login/:invalid', (req, res, next) => {
 router.get('/logout', (req, res, next) => {
     authController.logout(req, res, next)
 })
+
+//google auth routes 
+router.get('/google', passport.authenticate('google', {
+    scope: ['profile', 'email'] 
+}))
+
+// Callback route for Google to redirect to
+router.get('/google/callback', 
+    passport.authenticate('google', { failureRedirect: '/auth/login/invalid' }), //if authentication fails 
+    function(req, res) {
+        // Successful authentication, redirect to main page
+        res.redirect('/')
+    }
+)
 
 module.exports = router
