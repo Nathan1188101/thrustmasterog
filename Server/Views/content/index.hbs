@@ -1,12 +1,15 @@
 {{!-- all content here --}}
 <h1>Content Library</h1>
+<div class="searchBar-container">
+    <input class="searchBar" type="text" id="search" placeholder="Search">
+</div>
 {{#if user}}
     <a href="/content/create" style="text-decoration: none;">Add Content</a>
 {{/if}}
-<ul class="row">
+<ul class="row" id="content">
     {{#each content}}
     <li class="card mb-4 text-center">
-        <h5>{{this.title}}</h5>
+        <h5 id="title">{{this.title}}</h5>
         <p><iframe class="video" width="560" height="315" src="{{this.link}}" frameborder="0" allowfullscreen></iframe></p>
         {{#if ../user}}
             <a href="/content/delete/{{this._id}}" class="btn btn-primary"
@@ -19,4 +22,6 @@
             {{/if}}
     </li>
     {{/each}}
-</ul>
+</ul> 
+
+<script src="/Scripts/search.js"></script>

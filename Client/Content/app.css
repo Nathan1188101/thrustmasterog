@@ -261,22 +261,6 @@
   padding-top: 20px;
 }
 
-
-
-/* 
-.footer-svg{
-  background-image: url('../Content/footer.svg'); 
-  height: 1000px; 
-} */
-
-/* .spacer{
-  aspect-ratio: 960/300;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-} */
-
 /**********************************************************/
 /**************** login page styling **********************/
 /**********************************************************/
@@ -362,4 +346,20 @@ input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+/**********************************************************/
+/**************** content page styling ********************/
+/**********************************************************/
+
+.searchBar-container{
+  padding-left: 50px;
+  padding-right: 50px; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hide{
+  /* for hiding cards that are not within search params */
+  display: none; 
 }
