@@ -56,8 +56,8 @@ passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: process.env.GOOGLE_CALLBACK
-},function(accessToken, refreshToken, profile, done){
-
+},function(accessToken, refreshToken, profile, done)
+{
 User.findOrCreate({'google.id': profile.id}, {
       username: profile.emails[0].value, // because more than one email can be associated with a google acount, it's contained in an array and we are taking the first email in that array at index 0
       'google.id': profile.id, 
@@ -80,7 +80,7 @@ passport.serializeUser((user, done) => { //saving the user's id in the session
 })
 
 passport.deserializeUser((user, done) => {
-  done(null, user) //deserialize is fethcing the user from the db for each request using the id in the session 
+  done(null, user) //deserialize is fetching the user from the db for each request using the id in the session 
 })
 
 //link User model w/passport session mgmt
