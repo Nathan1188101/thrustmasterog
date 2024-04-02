@@ -1,13 +1,18 @@
-<h1>Add New Content</h1>
+<body class="background2 content-body">
+<h1 class="edit-h1">Add New Content</h1>
+<section class="edit-container">
 <form method="post">
     <fieldset>
-        <label for="title">Title: *</label>
-        <input name="title" id="title" required />
+        <label class="title-label" for="title">Title: <i class="fa-solid fa-pen-nib"></i></label>
+        <input class="title-input" name="title" id="title" type="text" required />
     </fieldset>
         <fieldset>
-        <label for="link">Link: *</label>
-        <input name="link" id="link" required />
-        <p>MUST BE EMBEDDED LINK</p>
+        <label  class="title-label" for="link">Link: <i class="fa-solid fa-link"></i></label>
+        <input class="title-input" name="link" id="link" type="text" required />
+        <p class="message">MUST BE EMBEDDED LINK</p>
     </fieldset>
-    <button class="btn btn-primary offset-2">Save</button>
+    <button class="btn btn-primary">Save</button>
 </form>
+</section>
+</body>
+
