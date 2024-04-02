@@ -1,3 +1,4 @@
+//auth check file so unauthorized users can't get to Create, Update, and Delete pages 
 const passport = require('passport')
 const User = require('../Models/user')
 

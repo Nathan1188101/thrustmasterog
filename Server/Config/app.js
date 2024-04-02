@@ -57,9 +57,9 @@ passport.use(new GoogleStrategy({
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
   callbackURL: process.env.GOOGLE_CALLBACK
 },function(accessToken, refreshToken, profile, done)
-{
+{                 //finding or creating based on google id (what we are comparing with in the db to what user in logging in with)
 User.findOrCreate({'google.id': profile.id}, {
-      username: profile.emails[0].value, // because more than one email can be associated with a google acount, it's contained in an array and we are taking the first email in that array at index 0
+      username: profile.emails[0].value, // because more than one email can be associated with a google account, it's contained in an array and we are taking the first email in that array at index 0
       'google.id': profile.id, 
       'google.token': accessToken,
       'google.email': profile.emails[0].value, //same here as mentioned above
