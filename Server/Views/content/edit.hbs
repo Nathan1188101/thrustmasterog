@@ -15,6 +15,7 @@
             <fieldset>
                 <label class="link-label" for="link">Link: <i class="fa-solid fa-link"></i></label>
                 <input class="link-input" name="link" id="link" type="text" required value="{{content.link}}" />
+                {{!-- Must be an embedded link and not just a copy past from the url because of how the code is set up --}}
                 <p class="message">MUST BE EMBEDDED LINK</p>
             </fieldset>
             <button class="btn btn-primary offset">Save</button>
