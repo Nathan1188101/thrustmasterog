@@ -237,6 +237,22 @@
 /*** home page styling ******************************/
 /****************************************************/
 
+.ad-container{
+  display: block; 
+  background-color: rgb(206, 208, 209);
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.ad-space{
+  transform: scale(2);
+}
+
+
 .skill{
   background-color:#1ec463; 
 }
